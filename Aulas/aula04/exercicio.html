@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+        }
+        input#orig{
+            font: normal 18pt arial; margin-top: 10px;
+            width: 265px;
+        }
+        input{
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de origem</h1>
+    Digite o país que nasceu: <input type="text" name="orig" id="orig">
+    <input type="button" value="Verificar" onclick="verify()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verify(){
+            var val = window.document.querySelector('input#orig')
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `<p>Você nasceu no ${val.value}.</p>`
+
+            if(val.value == 'brasil' || val.value == 'Brasil'){
+                res.innerHTML += '<strong> Brasileiro </strong>'
+            } else {
+                res.innerHTML += '<strong> Estrangeiro </strong>'
+            }
+        }
+    </script>
+</body>
+</html>

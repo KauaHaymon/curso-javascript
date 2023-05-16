@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao DOM</title>
+
+    <style>
+        body{
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+
+</head>
+<body>
+    <H1>Primeiros passos com o DOM</H1>
+
+    <p id="res">Aqui vai o resultado</p>
+
+    <p>Aprendendo <strong>dom</strong> em javascript</p>
+
+    <div id="msg">Clique em mim</div> <!-- DIV pra usar ID-->
+    
+    <div id="eu">eu mesmo</div>
+
+    <script>
+        window.document.getElementById('res').style.background = 'green'
+
+        var corpo = window.document.body
+
+        var p1 = window.document.getElementsByTagName('p')[1]
+        p1.style.background = 'lightgreen'
+        p1.style.color = 'blue'
+
+        var m = window.document.getElementById('msg')
+        m.style.background = "green"
+
+        //m.innerText = 'estou aguardando...'
+        //window.document.getElementById('msg').innerText = "legal..."
+
+        var eu = window.document.querySelector('div#eu') // # pra ID e . pra Class
+
+        eu.style.color = "blue"
+        eu.style.background = "lightgreen"
+
+        window.document.write("Esta escrito assim: " + p1.innerHTML) //innerHTML - puxa o html formatado
+
+      //p1.style.color = "lightblue"
+      //corpo.style.background = "black"
+    </script>
+
+</body>
+</html>
