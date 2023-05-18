@@ -1,2 +1,2 @@
 # curso-javascript
- Curso de JavaScript do CurosemVídeo
+ Trajetória de aprendizagem da linguagem JavaScript com o professor Gustavo Guanabara do Curso em Vídeo.
